@@ -1,24 +1,97 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+// const generateMarkdown = require('./develop/utils/generateMarkdown.js')
 
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-const name = profileDataArgs[0];
-const github = profileDataArgs[1];
+// content = generateMarkdown(projectName, email, github)
 
-const generatePage = (name, github) => {
-    return `# ${name}
+// fs.writeFile('README.md', content, err => {
+//     if (err) throw err;
 
-## ${github}
+//     console.log('README complete! See README.md to see the output!');
+// })
 
-[https://github.com/${github}]`;
+const promptAbout = () => {
+
+    return inquirer.prompt([
+
+      {
+        type: 'input',
+        name: 'projectTitle',
+        message: 'What is the title of your project? (Required)'
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of the project (Required)'
+      }
+
+    ]);
 };
 
-fs.writeFile('README.md', generatePage(name, github), err => {
-    if (err) throw err;
+const promptDetails = () => {
 
-    console.log('README complete! See README.md to see the output!');
-})
+    return inquirer.prompt([
+
+      {
+        type: 'confirm',
+        name: 'installation',
+        message: 'Add installation requirements?',
+        default: false
+      },
+      {
+        type: 'confirm',
+        name: 'usage',
+        message: 'Add usage instructions?',
+        default: false
+      },
+      {
+        type: 'checkbox',
+        name: 'licenses',
+        message: 'Select a license:',
+        choices: ['MIT', 'Apache License 2.0', 'Mozilla Public License', 'GNU General Public License v3.0', 'BSD 2-Clause "Simplified" License', 'None'],
+        default: 'None'
+      },
+      {
+        type: 'confirm',
+        name: 'contributing',
+        message: 'Add contributors?',
+        default: false
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Add and example to test your code:'
+      }
+
+    ])
+};
+
+const promptQuestions = () => {
+    
+    return inquirer.prompt([
+
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your GitHub Username'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter your email'
+        }
+
+    ])
+}
+  
+promptAbout()
+    .then(answers => console.log(answers))
+    .then(promptDetails)
+    .then(projectAnswers => console.log(projectAnswers))
+    .then(promptQuestions)
+    .then()
+
 
 
 // const printProfileData = profileDataArr => {
@@ -33,7 +106,7 @@ fs.writeFile('README.md', generatePage(name, github), err => {
 //     profileDataArr.forEach(profileItem => console.log(profileItem));
 // };
   
-// printProfileData(profileDataArgs);
+
 
 
 
