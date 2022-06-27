@@ -64,7 +64,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select a license:',
-        choices: ['MIT', 'Apache 2.0', 'MPL 2.0', 'ISC', 'GPLv3', 'Boost 1.0', 'IPL 1.0', 'FDL v1.3', 'None'],
+        choices: ['MIT', 'Apache_2.0', 'MPL_2.0', 'ISC', 'GPLv3', 'Boost_1.0', 'IPL_1.0', 'FDL_v1.3', 'None'],
         validate: (value) => {
             if(value) {
                 return true

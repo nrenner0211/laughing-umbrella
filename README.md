@@ -2,27 +2,25 @@
 
 ## Table of Contents
 
-- [readme-generator](#readme-generator)
-  - [Table of Contents](#table-of-contents)
-  - [License](#license)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Tests](#tests)
-  - [Questions](#questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## License
 
-[![license]
+[![license](https://img.shields.io/badge/License-Apache_2.0-blue.svg})](https://opensource.org/licenses/Apache_2.0)
 
 ## Description
 
-a generator for readmes
+generates high-quality readmes for your project
 
 ## Installation
 
-node and inquirer
+node and inquirer required
 
 ## Usage
 
@@ -30,13 +28,13 @@ npm init
 
 ## Contribution
 
-How to contribute: email me
+How to contribute: email for more info
 
 ## Tests
 
 Enter this command into your terminal to test the app:
 
-node index
+node index.js
 
 ## Questions
 
