@@ -57,7 +57,7 @@ Have a question/concern? Want to report an issue? Follow the links to reach out!
 
 [Video Walkthrough](https://drive.google.com/file/d/1e_8riViTzvL5tas3rgu2xBigf6bdjiQ0/view)
 
-# Have a nice day
+### Have a nice day
 `
 };
 

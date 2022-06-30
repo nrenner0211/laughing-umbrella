@@ -1,4 +1,4 @@
-# sample
+# readme-generator
 
 ## Table of Contents
 
@@ -12,17 +12,17 @@
 
 ## Description
 
-this is a sample app
+generates a high-quality readme for your project
 
 ## License
 
-[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 Click on the badge for more info!
 
 ## Repository
 
-sample.com
+github/nrener/redme
 
 ## Installation
 
@@ -50,10 +50,10 @@ Have a question/concern? Want to report an issue? Follow the links to reach out!
 
 [Email](nrenner0211@gmail.com)
 
-[GitHub](https://github.com/nrenner0211@gmail.com)
+[GitHub](https://github.com/nrenner0211)
 
 ## Video Walkthrough
 
 [Video Walkthrough](https://drive.google.com/file/d/1e_8riViTzvL5tas3rgu2xBigf6bdjiQ0/view)
 
-# Have a nice day
+### Have a nice day
