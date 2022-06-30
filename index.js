@@ -24,7 +24,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)',
+        message: 'Provide a unique description of the project (Required)',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -36,8 +36,57 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'repository',
+        message: 'Enter repository URL: (Required)',
+        validate: repoInput => {
+            if (repoInput) {
+                return true;
+            } else {
+                console.log('Please enter repository URL!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Select a license:',
+        default: 'None',
+        choices: [
+            {
+                name: 'MIT',
+                value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            }, 
+            {
+                name: 'Apache 2.0',
+                value: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+            }, 
+            {
+                name: 'CC0 1.0',
+                value: '[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)'
+            },
+            {
+                name: 'Mozilla Public License 2.0',
+                value: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+            }, 
+            {
+                name: 'IBM Public License v1.0',
+                value: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+            }, 
+            {
+                name: 'Boost 1.0',
+                value: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+            }, 
+            {
+                name: 'None',
+                value: 'No license'
+            }]
+    },
+    {
+        type: 'input',
         name: 'installation',
-        message: 'Add installation requirements:',
+        message: 'Add installation requirements, for example:',
+        default: 'npm init, npm install inquirer@8.2.4, npm install jest',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -50,7 +99,8 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Add usage instructions:',
+        message: 'Add usage instructions, for example:',
+        default: 'node index',
         validate: (value) => {
             if(value) {
                 return true
@@ -61,28 +111,16 @@ const questions = [
         }
     },
     {
-        type: 'list',
-        name: 'license',
-        message: 'Select a license:',
-        choices: ['MIT', 'Apache_2.0', 'MPL_2.0', 'ISC', 'GPLv3', 'Boost_1.0', 'IPL_1.0', 'FDL_v1.3', 'None'],
-        validate: (value) => {
-            if(value) {
-                return true
-            } else {
-                console.log('Please choose one.')
-                return false;
-            }
-        }
-    },
-    {
         type: 'input',
         name: 'contribution',
         message: 'Add instructions on how to contribute:',
+        default: 'fork repository'
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Add an example to test your code:'
+        message: 'Add a command to test your code, for example:',
+        default: 'npm run test'
     },
     {
         type: 'input',
@@ -92,7 +130,7 @@ const questions = [
             if (githubInput) {
                 return true;
             } else {
-                console.log('Please enter a username!');
+                console.log('Please enter a valid username!');
                 return false;
             }
         }
@@ -100,7 +138,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email: (Required)',
+        message: 'Enter your full email: (Required)',
         validate: emailInput => {
             if (emailInput) {
                 return true;

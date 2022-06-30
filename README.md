@@ -1,45 +1,59 @@
-# readme-generator
+# sample
 
 ## Table of Contents
 
 - [Description](#description)
+- [License](#license)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contribution](#contribution)
 - [Tests](#tests)
 - [Questions](#questions)
 
-## License
-
-[![license](https://img.shields.io/badge/License-Apache_2.0-blue.svg})](https://opensource.org/licenses/Apache_2.0)
-
 ## Description
 
-generates high-quality readmes for your project
+this is a sample app
+
+## License
+
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+
+Click on the badge for more info!
+
+## Repository
+
+sample.com
 
 ## Installation
 
-node and inquirer required
+npm init
 
 ## Usage
 
-npm init
+run
+<code>node index</code>
+in terminal
 
 ## Contribution
 
-How to contribute: email for more info
+How to contribute: fork repository
 
 ## Tests
 
 Enter this command into your terminal to test the app:
 
-node index.js
+<code>npm run test</code>
 
 ## Questions
 
-Have a question? Here's how you can reach me:
+Have a question/concern? Want to report an issue? Follow the links to reach out!
 
 [Email](nrenner0211@gmail.com)
 
-[GitHub](https://github.com/nrenner0211)
+[GitHub](https://github.com/nrenner0211@gmail.com)
+
+## Video Walkthrough
+
+[Video Walkthrough](https://drive.google.com/file/d/1e_8riViTzvL5tas3rgu2xBigf6bdjiQ0/view)
+
+# Have a nice day
